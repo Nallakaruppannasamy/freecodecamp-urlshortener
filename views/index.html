@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LinkForge | URL Shortener</title>
+
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="brand">
+      <div class="logo">LF</div>
+
+      <div>
+        <h1>LinkForge</h1>
+        <span>URL Shortener API</span>
+      </div>
+    </div>
+
+    <div class="status">
+      <span></span>
+      API ONLINE
+    </div>
+  </header>
+
+
+  <main>
+
+    <section class="hero">
+
+      <div class="badge">
+        SIMPLE • FAST • API POWERED
+      </div>
+
+      <h2>
+        Turn long URLs into
+        <span>short links.</span>
+      </h2>
+
+      <p>
+        Create compact links that are easy to share, remember,
+        and use anywhere.
+      </p>
+
+    </section>
+
+
+    <section class="shortener-card">
+
+      <div class="card-header">
+        <div>
+          <span class="label">CREATE SHORT LINK</span>
+          <h3>Shorten your URL</h3>
+        </div>
+
+        <div class="icon">↗</div>
+      </div>
+
+
+      <form action="/api/shorturl" method="POST">
+
+        <label for="url_input">
+          Enter your destination URL
+        </label>
+
+        <div class="input-row">
+
+          <input
+            id="url_input"
+            type="url"
+            name="url"
+            placeholder="https://example.com/your-long-url"
+            required
+          >
+
+          <button type="submit">
+            Shorten URL
+            <span>→</span>
+          </button>
+
+        </div>
+
+      </form>
+
+
+      <div class="example">
+        Example:
+        <code>https://www.freecodecamp.org/</code>
+      </div>
+
+    </section>
+
+
+    <section class="info-section">
+
+      <div class="section-title">
+        <span>HOW IT WORKS</span>
+        <h3>Three simple steps</h3>
+      </div>
+
+
+      <div class="steps">
+
+        <div class="step">
+          <div class="number">01</div>
+
+          <h4>Paste your URL</h4>
+
+          <p>
+            Enter any valid website URL into the form above.
+          </p>
+        </div>
+
+
+        <div class="step">
+          <div class="number">02</div>
+
+          <h4>Generate</h4>
+
+          <p>
+            Our API validates the URL and creates a unique short code.
+          </p>
+        </div>
+
+
+        <div class="step">
+          <div class="number">03</div>
+
+          <h4>Share</h4>
+
+          <p>
+            Use the generated short link to redirect visitors
+            to the original page.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="api-section">
+
+      <div class="section-title">
+        <span>API ENDPOINTS</span>
+        <h3>Developer friendly</h3>
+      </div>
+
+
+      <div class="endpoint">
+
+        <span class="method post">POST</span>
+
+        <code>/api/shorturl</code>
+
+        <span class="description">
+          Create a short URL
+        </span>
+
+      </div>
+
+
+      <div class="endpoint">
+
+        <span class="method get">GET</span>
+
+        <code>/api/shorturl/:short_url</code>
+
+        <span class="description">
+          Redirect to original URL
+        </span>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div>
+      <strong>LinkForge</strong>
+      <span>URL Shortener Microservice</span>
+    </div>
+
+    <div>
+      Built with Node.js & Express
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
